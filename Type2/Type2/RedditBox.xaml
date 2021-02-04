@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Type2.RedditBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Type2"
+             mc:Ignorable="d" >
+    <Grid >
+        <WrapPanel Orientation="Vertical" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="450" Background="White" HorizontalAlignment="Left">
+            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" Name="header"  >
+                <Label Content="nombre" Name="lblNombre"   ></Label>
+                <Label Content="points" Name="lblPoints"></Label>
+                <Label Content="·" Name="Separador"></Label>
+                <Label Content="X hours Ago" Name="lblTime"></Label>
+
+            </WrapPanel>
+            <TextBlock x:Name="txtContent" >
+
+            </TextBlock>
+            <WrapPanel Name="footer">
+                <Label Content="Reply" Name="lblReply"   ></Label>
+                <Label Content="Give Award" Name="lblAward"></Label>
+                <Label Content="Share" Name="lblShare"></Label>
+                <Label Content="Report"></Label>
+                <Label Content="Save" ></Label>
+            </WrapPanel>
+        </WrapPanel>
+
+
+    </Grid>
+</UserControl>
