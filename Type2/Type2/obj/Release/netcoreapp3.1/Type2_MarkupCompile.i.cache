@@ -1,18 +1,18 @@
 ﻿Type2
-
+1.0.0.0
 
 winexe
 C#
 .cs
-F:\Git\Type2\Type2\Type2\obj\Debug\netcoreapp3.1\
+F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\
 Type2
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
 F:\Git\Type2\Type2\Type2\App.xaml
 2-1001469536
 
-4-746931778
+6450978183
 1921654412462
 MainWindow.xaml;RedditBox.xaml;
 

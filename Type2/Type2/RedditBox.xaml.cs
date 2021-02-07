@@ -18,9 +18,27 @@ namespace Type2
     /// </summary>
     public partial class RedditBox : UserControl
     {
+      public int order { get; set; }        
         public RedditBox()
         {
             InitializeComponent();
+
+            //Thickness margin = wrapBox.Margin;
+            //margin.Left = 30 * order;
+            //wrapBox.Margin = margin;
+        }
+
+        
+       
+
+        private void btnReply_Click(object sender, RoutedEventArgs e)
+        {
+            RedditBox redditBox = new RedditBox();
+            redditBox.order = this.order+1;
+
+            wrapResponse.Children.Add(redditBox);
+            
+
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Type2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinHeight="600" MinWidth="850" Width="900">
     <Grid >
 
         <Grid.ColumnDefinitions>
@@ -13,21 +13,33 @@
             <ColumnDefinition Width="0.3*"/>
         </Grid.ColumnDefinitions>
 
+        <ScrollViewer Margin="0,0,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto">
+            <StackPanel Margin="20,20,20,20" Grid.Column="0" Name="wrapView" Orientation="Vertical"  >
+                <local:RedditBox/>
 
-        <StackPanel Margin="20,20,20,20" Grid.Column="0"  >
-            <local:RedditBox/>
+            </StackPanel>
+        </ScrollViewer>
+        
 
-
-
-        </StackPanel>
-
-        <WrapPanel Grid.Column="1" VerticalAlignment="Center" >
-            <TextBlock x:Name="txtVelocidad" FontSize="18" Text="Velocidad: " HorizontalAlignment="Stretch"/>
-
-            <Slider x:Name="SliderVelocidad" Height="30" Width="150" ValueChanged="SliderVelocidad_ValueChanged" Maximum="100" Minimum="10"  />
+       
+        <WrapPanel Grid.Column="1" VerticalAlignment="Center" Name="wrapOptions"  >
+            <TextBlock x:Name="txtVelocidad" FontSize="25" Text="Velocidad: " HorizontalAlignment="Stretch"/>
+            <Slider x:Name="SliderVelocidad"  Width="120" ValueChanged="SliderVelocidad_ValueChanged" Maximum="100" Minimum="10" VerticalAlignment="Center" />
+            <Button x:Name="AddButon" Margin="30,20,30,20" Cursor="Hand" Click="AddButon_Click"  >
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Agregar Comentario" FontSize="15" ></Label>
+                    <Image Source="/Resources/iconfinder_plus_1814113.png" Width="35" Height="35"  />
+                </StackPanel>
+               
+            </Button>
+            <Button Cursor="Hand" Click="Button_Click"  HorizontalAlignment="Center"  Margin="70,0,70,3">
+                <Button.Content>
+                    <WrapPanel>
+                        <Label x:Name="lblPlay" Content="Play"   FontSize="20"/>
+                        <Image Source="/Resources/iconfinder_play_1814112.png" Height="35" Width="35"/>                    
+                    </WrapPanel>
+                </Button.Content>
+            </Button>
         </WrapPanel>
-
-
-
     </Grid>
 </Window>

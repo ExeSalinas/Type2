@@ -6,4 +6,30 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\iconfinder_arrow_right_1814085.png" />
+    <None Remove="Resources\iconfinder_play_1814112.png" />
+    <None Remove="Resources\iconfinder_plus_1814113.png" />
+    <None Remove="Resources\iconfinder_replies-outline_4295562.png" />
+    <None Remove="Resources\iconfinder_replies_4295561.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\iconfinder_arrow_right_1814085.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\iconfinder_play_1814112.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\iconfinder_plus_1814113.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\iconfinder_replies-outline_4295562.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\iconfinder_replies_4295561.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>
