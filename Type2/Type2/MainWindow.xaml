@@ -14,9 +14,8 @@
         </Grid.ColumnDefinitions>
 
         <ScrollViewer Margin="0,0,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto">
-            <StackPanel Margin="20,20,20,20" Grid.Column="0" Name="wrapView" Orientation="Vertical"  >
+            <StackPanel x:Name="mainPanel" Margin="20,20,20,20" Grid.Column="0"  Orientation="Vertical"  >
                 <local:RedditBox/>
-
             </StackPanel>
         </ScrollViewer>
         

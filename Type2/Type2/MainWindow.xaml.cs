@@ -18,9 +18,9 @@ namespace Type2
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
-        Double velocidad = new Double();
+        int velocidad = new Int16();
 
 
         public MainWindow()
@@ -31,24 +31,53 @@ namespace Type2
         private void SliderVelocidad_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             Slider slider = sender as Slider;
-            velocidad = SliderVelocidad.Value;
+            velocidad = (int)SliderVelocidad.Value;
             txtVelocidad.Text = "Velocidad : " + velocidad.ToString("0");
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-        //    Presentacion pres = new Presentacion((int)SliderVelocidad.Value, textBoxPrincipal.Text);
-        //    pres.Show();
-        
+            UIElementCollection reditboxcollection= mainPanel.Children;
+            foreach (UIElement reditBox in reditboxcollection)
+            {   
+                reditBox.Visibility = Visibility.Collapsed;
+            }
+
+            foreach (UIElement rb in reditboxcollection)
+            {
+                rb.Visibility = Visibility.Visible;
+                RedditBox redditBox = (RedditBox)rb;
+                await redditBox.typewriting(velocidad);
+               
+                
+            }
+
+            //var sended = false;
+            //int cont = 0;
+            // while (cont < reditboxcollection.Count)
+            // {
+            //    UIElement uIElement = reditboxcollection[cont];
+            //    RedditBox redditBox = (RedditBox)uIElement;
+            //    if (sended)
+            //    {   
+            //        uIElement.Visibility = Visibility.Visible;
+
+                //        redditBox.typewriting(velocidad);
+                //        sended = true;
+                //    }
+                //    if (redditBox.termino) { cont++;sended = false; }
+                //    redditBox.
+                // }
 
 
-        }
+            }
 
         private void AddButon_Click(object sender, RoutedEventArgs e)
         {
             RedditBox redditBox = new RedditBox();
-            wrapView.Children.Add(redditBox);
+            mainPanel.Children.Add(redditBox);
         }
+
     }
 }

@@ -12,6 +12,13 @@
     <None Remove="Resources\iconfinder_plus_1814113.png" />
     <None Remove="Resources\iconfinder_replies-outline_4295562.png" />
     <None Remove="Resources\iconfinder_replies_4295561.png" />
+    <None Remove="Resources\Red1.png" />
+    <None Remove="Resources\Red2.png" />
+    <None Remove="Resources\Red3.png" />
+    <None Remove="Resources\Red4.png" />
+    <None Remove="Resources\Red5.png" />
+    <None Remove="Resources\Red6.png" />
+    <None Remove="Resources\Red7.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +36,27 @@
     </Resource>
     <Resource Include="Resources\iconfinder_replies_4295561.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Red7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
 

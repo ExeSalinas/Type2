@@ -6,18 +6,26 @@
              xmlns:local="clr-namespace:Type2"
              mc:Ignorable="d" >
     <Grid >
-        <WrapPanel Orientation="Vertical">
-            <WrapPanel   Orientation="Horizontal" Background="#FFB7BD30">
-                <Rectangle Width="2" VerticalAlignment="Stretch" Stroke="LightGray" Fill="LightGray" Margin="10,20,20,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <WrapPanel Orientation="Vertical" VerticalAlignment="Stretch">
+            
+            <WrapPanel   Orientation="Horizontal" Background="White">
+               
+                <DockPanel  VerticalAlignment="Stretch" >
+                    <Image Source="/Resources/Red1.png" Width="30" Height="30" Margin="5" DockPanel.Dock="Top" />
+                    <Rectangle Width="2" VerticalAlignment="Stretch" Stroke="LightGray" Fill="LightGray" Margin="0,0,0,7" />
+                </DockPanel>
 
-                </Rectangle>
                 <WrapPanel Name="wrapBox" Orientation="Vertical"  VerticalAlignment="Stretch" MinWidth="400" HorizontalAlignment="Left" >
                     <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" Name="header"  >
                         <TextBox  Text="nombre " Name="txtNombre" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" AutoWordSelection="True" ></TextBox>
                         <!--<TextBox  Text="points " Name="txtPoints" VerticalAlignment="Center" Margin="2" Background="{x:Null}" BorderBrush="{x:Null}"></TextBox>-->
                         <Label Content="·" Name="Separador"></Label>
                         <TextBox  Text="X" Name="txtTime" VerticalAlignment="Center" Margin="2,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}"></TextBox>
-                        <Label Content="hours ago" ></Label>
+                        <TextBox  Text="hours" Name="txtHours" VerticalAlignment="Center" Margin="2,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}"></TextBox>
+                        <Label Content="ago" ></Label>
                     </WrapPanel>
                     <TextBox HorizontalAlignment="Left" x:Name="txtContent" AutomationProperties.HelpText="Introducir el Texto" AcceptsReturn="True" AcceptsTab="True" Width="350" TextWrapping="Wrap" BorderBrush="{x:Null}" >
 
@@ -35,12 +43,9 @@
                         <Label Content="Save"  VerticalAlignment="Center" ></Label>
                     </WrapPanel>
                     <WrapPanel Name="wrapResponse" Orientation="Vertical" Margin="10,0,0,0">
-
-
-
                     </WrapPanel>
-
                 </WrapPanel>
+                
 
             </WrapPanel>
         </WrapPanel>
