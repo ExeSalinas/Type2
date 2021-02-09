@@ -48,17 +48,15 @@ namespace Type2
         
         public async Task typewriting(int milisVelocidadTipeo )
         {
-            this.velocidad_tipeo = milisVelocidadTipeo +15 ;
+            termino = false;
+            this.velocidad_tipeo = 200- milisVelocidadTipeo ;
             rand = new Random(System.DateTime.Now.Millisecond);
             this.timer.Interval = new TimeSpan(0, 0, 0, 0,velocidad_tipeo);// INTERVALO  , BASADO EN LA VELOCIDAD QUE RECIBIO POR PARAM 
             this.timer.Tick += new EventHandler(TimerTick);
             SetString();
             this.timer.Start();
-            var waitTask = Task.Run(async () =>
-            {
-                while (termino == false) await Task.Delay(100000);                
-            });
-            await waitTask;
+            
+            await Termino(velocidad_tipeo, -1);
         }
 
         public void SetString()
@@ -90,10 +88,25 @@ namespace Type2
             
 
         }
-        private async Task Termino()
-        {   
-           
+        
+        bool Condition()
+        {
+            if (termino) { return true; }
+            return false;
         }
+
+        public  async Task Termino(int frequency = 25, int timeout = -1)
+        {
+            var waitTask = Task.Run(async () =>
+            {
+                while (termino == false) await Task.Delay(100);
+            });
+
+            await waitTask;
+            //if (waitTask != await Task.WhenAny(waitTask, Task.Delay(timeout)))
+            //    throw new TimeoutException();
+        }
+        
         void AddFollowingLetter()
 
         {
