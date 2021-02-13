@@ -1,0 +1,5 @@
+F:\APP\Type2.exe
+F:\APP\Type2.dll
+F:\APP\Type2.deps.json
+F:\APP\Type2.runtimeconfig.json
+F:\APP\Type2.pdb

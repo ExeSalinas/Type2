@@ -19,13 +19,14 @@
                 </DockPanel>
 
                 <WrapPanel Name="wrapBox" Orientation="Vertical"  VerticalAlignment="Stretch" MinWidth="400" HorizontalAlignment="Left" >
-                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" Name="header"  >
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Name="header"  >
                         <TextBox  Text="nombre " Name="txtNombre" VerticalAlignment="Center" BorderBrush="{x:Null}" Background="{x:Null}" AutoWordSelection="True" ></TextBox>
                         <!--<TextBox  Text="points " Name="txtPoints" VerticalAlignment="Center" Margin="2" Background="{x:Null}" BorderBrush="{x:Null}"></TextBox>-->
                         <Label Content="·" Name="Separador"></Label>
                         <TextBox  Text="X" Name="txtTime" VerticalAlignment="Center" Margin="2,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}"></TextBox>
                         <TextBox  Text="hours" Name="txtHours" VerticalAlignment="Center" Margin="2,0,0,0" Background="{x:Null}" BorderBrush="{x:Null}"></TextBox>
                         <Label Content="ago" ></Label>
+                        <Button x:Name="btnEliminar" HorizontalAlignment="Right" Width="20" Content="X" Margin="230,0,0,0" Click="btnEliminar_Click"> </Button>
                     </WrapPanel>
                     <TextBox HorizontalAlignment="Left" x:Name="txtContent" AutomationProperties.HelpText="Introducir el Texto" AcceptsReturn="True" AcceptsTab="True" Width="350" TextWrapping="Wrap" BorderBrush="{x:Null}" >
 

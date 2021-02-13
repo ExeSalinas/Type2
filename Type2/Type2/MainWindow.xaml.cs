@@ -38,21 +38,27 @@ namespace Type2
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            btnPlay.IsEnabled = false;
+            AddButon.IsEnabled = false;
             UIElementCollection reditboxcollection= mainPanel.Children;
             foreach (UIElement reditBox in reditboxcollection)
             {   
                 reditBox.Visibility = Visibility.Collapsed;
+                
             }
-
+            scrollViewer.ScrollToVerticalOffset(scrollViewer.ExtentHeight);
+           
             foreach (UIElement rb in reditboxcollection)
             {
-                rb.Visibility = Visibility.Visible;
+                if (rb.IsEnabled) { rb.Visibility = Visibility.Visible; }
+                
                 RedditBox redditBox = (RedditBox)rb;
                 await redditBox.typewriting(velocidad);
                
                 
             }
-
+            btnPlay.IsEnabled = true;
+            AddButon.IsEnabled = true;
             //var sended = false;
             //int cont = 0;
             // while (cont < reditboxcollection.Count)
@@ -63,15 +69,15 @@ namespace Type2
             //    {   
             //        uIElement.Visibility = Visibility.Visible;
 
-                //        redditBox.typewriting(velocidad);
-                //        sended = true;
-                //    }
-                //    if (redditBox.termino) { cont++;sended = false; }
-                //    redditBox.
-                // }
+            //        redditBox.typewriting(velocidad);
+            //        sended = true;
+            //    }
+            //    if (redditBox.termino) { cont++;sended = false; }
+            //    redditBox.
+            // }
 
 
-            }
+        }
 
         private void AddButon_Click(object sender, RoutedEventArgs e)
         {

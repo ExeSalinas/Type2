@@ -48,15 +48,59 @@ namespace Type2
         
         public async Task typewriting(int milisVelocidadTipeo )
         {
+            if (!this.IsEnabled) { return; }
+            
+            btnVisibiliy(btnEliminar, false);
+
+            UIElementCollection reditboxcollection= wrapResponse.Children ;
+            foreach (UIElement reditBox in reditboxcollection)
+            {
+                reditBox.Visibility = Visibility.Collapsed;
+               
+            }
+
+            
             termino = false;
-            this.velocidad_tipeo = 200- milisVelocidadTipeo ;
+            this.velocidad_tipeo = 300 - milisVelocidadTipeo ;
             rand = new Random(System.DateTime.Now.Millisecond);
             this.timer.Interval = new TimeSpan(0, 0, 0, 0,velocidad_tipeo);// INTERVALO  , BASADO EN LA VELOCIDAD QUE RECIBIO POR PARAM 
-            this.timer.Tick += new EventHandler(TimerTick);
+            var tick = new EventHandler(TimerTick);
+            this.timer.Tick += tick;
             SetString();
             this.timer.Start();
             
             await Termino(velocidad_tipeo, -1);
+            this.timer.Tick -= tick;
+           
+
+
+            foreach (UIElement rb in reditboxcollection)
+            {
+
+                if (rb.IsEnabled) { rb.Visibility = Visibility.Visible; }
+                RedditBox redditBox = (RedditBox)rb;
+                await redditBox.typewriting(milisVelocidadTipeo);
+               
+
+            }
+            btnVisibiliy(btnEliminar, true);
+        }
+
+        private void btnVisibiliy(Button button, bool enabled)
+        {
+            if (enabled)
+            {
+                button.Visibility = Visibility.Visible;
+                button.IsEnabled = true;
+
+            }
+            else
+            {
+                button.Visibility = Visibility.Hidden;
+                button.IsEnabled = false;
+                
+
+            }
         }
 
         public void SetString()
@@ -115,5 +159,12 @@ namespace Type2
 
         }
 
+        private void btnEliminar_Click(object sender, RoutedEventArgs e)
+        {
+            this.IsEnabled = false;
+            this.Visibility = Visibility = Visibility.Collapsed;
+            
+
+        }
     }
 }

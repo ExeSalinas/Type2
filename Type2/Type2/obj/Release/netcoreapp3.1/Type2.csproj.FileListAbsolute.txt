@@ -19,3 +19,10 @@ F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.csproj.CoreCompileInput
 F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.dll
 F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.pdb
 F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.genruntimeconfig.cache
+F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.csprojAssemblyReference.cache
+F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Presentacion.g.cs
+F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Presentacion.baml
+F:\Git\Type2\Type2\Type2\bin\Release\netcoreapp3.1\Type2.dll.manifest
+F:\Git\Type2\Type2\Type2\bin\Release\netcoreapp3.1\Type2.application
+F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.dll.manifest
+F:\Git\Type2\Type2\Type2\obj\Release\netcoreapp3.1\Type2.application

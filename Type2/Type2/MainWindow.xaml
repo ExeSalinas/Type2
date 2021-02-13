@@ -13,7 +13,7 @@
             <ColumnDefinition Width="0.3*"/>
         </Grid.ColumnDefinitions>
 
-        <ScrollViewer Margin="0,0,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto">
+        <ScrollViewer x:Name="scrollViewer" Margin="0,0,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto">
             <StackPanel x:Name="mainPanel" Margin="20,20,20,20" Grid.Column="0"  Orientation="Vertical"  >
                 <local:RedditBox/>
             </StackPanel>
@@ -31,7 +31,7 @@
                 </StackPanel>
                
             </Button>
-            <Button Cursor="Hand" Click="Button_Click"  HorizontalAlignment="Center"  Margin="70,0,70,3">
+            <Button Name="btnPlay" Cursor="Hand" Click="Button_Click"  HorizontalAlignment="Center"  Margin="70,0,70,3">
                 <Button.Content>
                     <WrapPanel>
                         <Label x:Name="lblPlay" Content="Play"   FontSize="20"/>
