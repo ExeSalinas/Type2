@@ -57,6 +57,12 @@ namespace Type2
                
                 
             }
+            foreach (UIElement rb in reditboxcollection)
+            {
+                RedditBox redditBox = (RedditBox)rb;
+                redditBox.btnEliminarVisibility(true);
+            }
+
             btnPlay.IsEnabled = true;
             AddButon.IsEnabled = true;
             //var sended = false;

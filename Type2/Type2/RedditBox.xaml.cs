@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Type2
@@ -50,7 +41,7 @@ namespace Type2
         {
             if (!this.IsEnabled) { return; }
             
-            btnVisibiliy(btnEliminar, false);
+            btnEliminarVisibility(false);
 
             UIElementCollection reditboxcollection= wrapResponse.Children ;
             foreach (UIElement reditBox in reditboxcollection)
@@ -80,18 +71,24 @@ namespace Type2
                 if (rb.IsEnabled) { rb.Visibility = Visibility.Visible; }
                 RedditBox redditBox = (RedditBox)rb;
                 await redditBox.typewriting(milisVelocidadTipeo);
-               
-
-            }
-            btnVisibiliy(btnEliminar, true);
+            }       
         }
 
-        private void btnVisibiliy(Button button, bool enabled)
+        public void btnEliminarVisibility(bool enabled)
         {
+            var button = this.btnEliminar;
             if (enabled)
             {
+
+                UIElementCollection reditboxcollection = wrapResponse.Children;
+                foreach (UIElement rb in reditboxcollection)
+                {
+                    RedditBox redditBox = (RedditBox)rb;
+                    redditBox.btnEliminarVisibility(true);
+                }
                 button.Visibility = Visibility.Visible;
                 button.IsEnabled = true;
+
 
             }
             else
